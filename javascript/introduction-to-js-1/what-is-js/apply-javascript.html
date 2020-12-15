@@ -3,6 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Apply JavaScript example</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        function CreatContent(){
+          let p = document.createElement("p");
+          p.textContent = "you click the butoon!";
+          document.body.appendChild(p);
+        }
+
+          const buttons = document.querySelectorAll("button");
+
+          for(let i = 0 ; i < buttons.length ; i ++){
+            buttons[i].addEventListener("click", CreatContent)
+          }
+
+       
+      })
+    </script>
   </head>
   <body>
     <button>Click me</button>
